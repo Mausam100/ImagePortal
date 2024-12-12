@@ -10,9 +10,10 @@ import fragmentShader from "../shaders/imageReveal/fragment.glsl";
 
 // Array of image URLs
 const IMAGES = [
-  "https://images.unsplash.com/photo-1531327431456-837da4b1d562?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1vdG9yY3ljbGV8ZW58MHx8MHx8fDA%3D",
-  "https://images.unsplash.com/photo-1675233262719-6b2309a2e751?w=500&auto=format&fit=crop&q=60",
-  "https://images.unsplash.com/photo-1648460527059-040bb7b30561?w=500&auto=format&fit=crop&q=60",
+  "./1st.jpg",
+  "./2nd.jpg",
+  "./3rd.jpg",
+  
   
 ];
 
