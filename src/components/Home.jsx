@@ -93,12 +93,12 @@ const Home = () => {
           />
         </Suspense>
       </Canvas>
-      <div
+      <button
         onClick={handleReveal}
         className=" px-4 py-2 cursor-pointer bg-neutral-800 text-white text-lg rounded-md absolute z-50 bottom-7 left-1/2 -translate-x-1/2"
       >
         Next
-      </div>
+      </button>
     </main>
   );
 };
