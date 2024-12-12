@@ -9,13 +9,7 @@ import vertexShader from "../shaders/imageReveal/vertex.glsl";
 import fragmentShader from "../shaders/imageReveal/fragment.glsl";
 
 // Array of image URLs
-const IMAGES = [
-  "./1st.jpg",
-  "./2nd.jpg",
-  "./3rd.jpg",
-  
-  
-];
+const IMAGES = ["./1st.jpg", "./2nd.jpg", "./3rd.jpg"];
 
 const ImageRevealMaterial = shaderMaterial(
   {
@@ -24,7 +18,6 @@ const ImageRevealMaterial = shaderMaterial(
     uProgress: 0,
     uImageRes: new THREE.Vector2(1.0, 1.0),
     uRes: new THREE.Vector2(1.0, 1.0),
-    
   },
   vertexShader,
   fragmentShader,
@@ -67,8 +60,6 @@ const Home = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const revealProgress = useMotionValue(1);
 
- 
-
   const handleReveal = () => {
     if (isRevealed) {
       animate(revealProgress, 0, {
@@ -92,7 +83,6 @@ const Home = () => {
 
   return (
     <main className="relative h-full w-full">
-      
       <Canvas className="bg-[#bdbdbd]" camera={{ fov: 10 }}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[0, 0, 5]} />
@@ -100,17 +90,14 @@ const Home = () => {
           <Scene
             revealProgress={revealProgress}
             currentImage={IMAGES[currentImageIndex]}
-            
           />
         </Suspense>
       </Canvas>
-      <div className="flex items-center absolute z-50 bottom-7 left-1/2 -translate-x-1/2">
-        <div
-          onClick={handleReveal}
-          className="px-4 py-2 cursor-pointer bg-neutral-800 text-white text-sm rounded-md"
-        >
-          Next
-        </div>
+      <div
+        onClick={handleReveal}
+        className=" px-4 py-2 cursor-pointer bg-neutral-800 text-white text-lg rounded-md absolute z-50 bottom-7 left-1/2 -translate-x-1/2"
+      >
+        Next
       </div>
     </main>
   );
