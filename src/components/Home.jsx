@@ -105,12 +105,12 @@ const Home = () => {
         </Suspense>
       </Canvas>
       <div className="flex items-center absolute z-50 bottom-7 left-1/2 -translate-x-1/2">
-        <button
+        <div
           onClick={handleReveal}
-          className="px-4 py-2 bg-neutral-800 text-white text-sm rounded-md"
+          className="px-4 py-2 cursor-pointer bg-neutral-800 text-white text-sm rounded-md"
         >
           Next
-        </button>
+        </div>
       </div>
     </main>
   );
